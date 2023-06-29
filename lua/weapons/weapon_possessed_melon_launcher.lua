@@ -20,12 +20,12 @@ SWEP.ViewModelFlip              = false
 SWEP.Base 			= "weapon_tttbase"
 SWEP.Kind           = WEAPON_EQUIP1
 
-if engine.ActiveGamemode() == "terrortown" then
-	SWEP.Primary.ClipSize = GetConVar("possessed_melon_ammo"):GetInt()
-	SWEP.Primary.DefaultClip = GetConVar("possessed_melon_ammo"):GetInt()
-else
+if engine.ActiveGamemode() == "sandbox" then
 	SWEP.Primary.ClipSize = -1
 	SWEP.Primary.DefaultClip = -1
+else
+	SWEP.Primary.ClipSize = GetConVar("possessed_melon_ammo"):GetInt()
+	SWEP.Primary.DefaultClip = GetConVar("possessed_melon_ammo"):GetInt()
 end
 SWEP.Primary.Automatic = true
 SWEP.DrawWeaponInfoBox	= false
