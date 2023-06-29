@@ -236,11 +236,13 @@ function SWEP:SecondaryAttack()
 		
 		timer.Simple(0.1,function()
 			local d = DamageInfo()
-			d:SetDamage( 100 )
-			d:SetAttacker( mel )
-			d:SetDamageType( DMG_BLAST ) 
+			if mel and mel:IsValid() then
+				d:SetDamage( 100 )
+				d:SetAttacker( mel )
+				d:SetDamageType( DMG_BLAST ) 
 
-			mel:TakeDamageInfo( d )
+				mel:TakeDamageInfo( d )
+			end
 		end)
 
 	end)
