@@ -1,6 +1,4 @@
 
-//if ( !IsMounted( "ep2" ) ) then return end
-
 AddCSLuaFile()
 
 SWEP.PrintName = "PossMelLaunch"
@@ -21,8 +19,14 @@ SWEP.ViewModelFlip              = false
 
 SWEP.Base 			= "weapon_tttbase"
 SWEP.Kind           = WEAPON_EQUIP1
-SWEP.Primary.ClipSize = GetConVar("possessed_melon_ammo"):GetInt()
-SWEP.Primary.DefaultClip = GetConVar("possessed_melon_ammo"):GetInt()
+
+if engine.ActiveGamemode() == "terrortown" then
+	SWEP.Primary.ClipSize = GetConVar("possessed_melon_ammo"):GetInt()
+	SWEP.Primary.DefaultClip = GetConVar("possessed_melon_ammo"):GetInt()
+else
+	SWEP.Primary.ClipSize = -1
+	SWEP.Primary.DefaultClip = -1
+end
 SWEP.Primary.Automatic = true
 SWEP.DrawWeaponInfoBox	= false
 SWEP.Primary.Ammo = "none"
