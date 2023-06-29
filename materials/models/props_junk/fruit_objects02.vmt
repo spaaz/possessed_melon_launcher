@@ -1,0 +1,19 @@
+"UnlitTwoTexture"
+{
+	"$basetexture" "Models/props_junk/fruit_objects01"
+
+	"$texture2" "models/props_junk/portalball001b_sheet2"
+	"$texture2scale" 1.0
+
+ 	"$model" 1
+	"Proxies"
+	{
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" -.2
+			"texturescrollangle" 60
+		}
+	}
+}

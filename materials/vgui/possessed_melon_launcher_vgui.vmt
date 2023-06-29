@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/possessed_melon_launcher_vgui"
+	"$vertexcolor" 1
+	"$vertexalpha" 1
+	"$translucent" 1
+}
