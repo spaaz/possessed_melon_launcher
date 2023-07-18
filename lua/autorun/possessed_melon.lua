@@ -55,13 +55,13 @@ hook.Add( "Think", "melonThink" , function()
 		
 						phy:ApplyForceOffset(yeet * yeetforce, pos + Vector(0,0,5))
 					else
-						local vel = ent:GetVelocity()
-						local enemyVel = enemy:GetVelocity()
-						local yeetforce = math.Clamp(yeet:Length(),100,200)*10						
-						yeet = yeet + (vel - enemyVel)*Vector(1,1,0)
-						yeet:Normalize()
+						--local vel = ent:GetVelocity()
+						--local enemyVel = enemy:GetVelocity()
+						--local yeetforce = math.Clamp(yeet:Length(),100,200)*10						
+						--yeet = yeet + (vel - enemyVel)*Vector(1,1,0)
+						--yeet:Normalize()
 		
-						phy:ApplyForceOffset(yeet * yeetforce, pos + Vector(0,0,5))
+						--phy:ApplyForceOffset(yeet * yeetforce, pos + Vector(0,0,5))
 					end
 				end
 			end

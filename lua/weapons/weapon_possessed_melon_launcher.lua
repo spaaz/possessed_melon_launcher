@@ -246,8 +246,8 @@ function SWEP:SecondaryAttack()
 		end)
 
 	end)
-	self:SetNextSecondaryFire( CurTime() + .6 )
-	phy:SetVelocity(Forward * 1200)
+	self:SetNextSecondaryFire( CurTime() + .4 )
+	phy:SetVelocity(Forward * 1000)
 
 end
 
