@@ -16,9 +16,9 @@ hook.Add("EntityTakeDamage","melondmg",function(target,dmgInfo)
 	end
 	if att and IsEntity(att) and att:IsValid() and att:GetClass() == "npc_rollermine" and att:GetName() == "PML_Melon" then
 		if bit.band(dmgInfo:GetDamageType(), DMG_CRUSH) == 0 then
-			dmgInfo:ScaleDamage(GetConVar("possessed_melon_exp_dam_mod"):GetFloat())
+			dmgInfo:ScaleDamage(GetConVar("possessed_melon_exp_dam_mod"):GetFloat()*1.5)
 		else
-			dmgInfo:ScaleDamage(GetConVar("possessed_melon_phy_dam_mod"):GetFloat())
+			dmgInfo:ScaleDamage(GetConVar("possessed_melon_phy_dam_mod"):GetFloat()*2)
 		end
 		if IsValid(att.Owner) then
 			dmgInfo:SetInflictor(att)
@@ -27,9 +27,9 @@ hook.Add("EntityTakeDamage","melondmg",function(target,dmgInfo)
 	end
 	if inf and IsEntity(inf) and inf:IsValid() and inf:GetClass() == "hunter_flechette" and inf:GetName() == "PML_Flechette" then
 		if bit.band(dmgInfo:GetDamageType(), DMG_NEVERGIB) == 0  then
-			dmgInfo:ScaleDamage(GetConVar("possessed_melon_sha_dam_mod"):GetFloat()*2)
+			dmgInfo:ScaleDamage(GetConVar("possessed_melon_sha_dam_mod"):GetFloat()*3)
 		else
-			dmgInfo:ScaleDamage(GetConVar("possessed_melon_sha_dam_mod"):GetFloat())
+			dmgInfo:ScaleDamage(GetConVar("possessed_melon_sha_dam_mod"):GetFloat()*1.5)
 		end
 	end
 end)

@@ -191,10 +191,10 @@ end
 
 function SWEP:SecondaryAttack()
 
-	if self:Clip1() >= 0 and self:Clip1() < 16 then return end
+	if self:Clip1() >= 0 and self:Clip1() < 10 then return end
 	
-	if self:Clip1() >= 16 then
-		self:SetClip1(self:Clip1() - 16)
+	if self:Clip1() >= 10 then
+		self:SetClip1(self:Clip1() - 10)
 	end
 	
 	self:SendWeaponAnim(ACT_VM_SECONDARYATTACK)
@@ -246,7 +246,7 @@ function SWEP:SecondaryAttack()
 		end)
 
 	end)
-	self:SetNextSecondaryFire( CurTime() + .4 )
+	self:SetNextSecondaryFire( CurTime() + .35 )
 	phy:SetVelocity(Forward * 1000)
 
 end
